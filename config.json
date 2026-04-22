@@ -1,0 +1,8 @@
+{
+    "wake_time": 21600,
+    "gym_earliest": 30600,
+    "gym_duration": 7200,
+    "goal_work_hours": 6,
+    "sleep_anchor": 82800,
+    "day_type": "a"
+}
