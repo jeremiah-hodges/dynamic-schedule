@@ -1,0 +1,62 @@
+const SCHEDULES = {
+  a: [
+    {name:"Wake + anchor",         start:360, end:375,  type:"routine",  tag:"routine",    note:"Water, no phone. Write today's executive goals."},
+    {name:"Breakfast + prep",      start:375, end:405,  type:"fuel",     tag:"fuel",       note:"Real meal. Get situated. No screens if possible."},
+    {name:"Sprint 1 — CS",         start:405, end:495,  type:"sprint",   tag:"goal 1",     note:"CS fundamentals. One topic, first principles. Write code by hand."},
+    {name:"Transition to gym",     start:495, end:510,  type:"fuel",     tag:"transition", note:"Close tabs, pack bag, out the door."},
+    {name:"Workout — 2 hrs",       start:510, end:630,  type:"workout",  tag:"workout",    note:"Strength + Zone 2 cardio. Post-exercise peak hits your afternoon sprints."},
+    {name:"Recovery + refuel",     start:630, end:675,  type:"fuel",     tag:"recovery",   note:"Post-workout meal. Shower. Let cortisol settle."},
+    {name:"Sprint 2 — Brainstorm", start:675, end:765,  type:"sprint",   tag:"goal 2",     note:"Dump every idea. Pick the strongest. Pressure test it ruthlessly."},
+    {name:"Lunch + midday reset",  start:765, end:825,  type:"fuel",     tag:"fuel",       note:"Real meal away from desk. Circadian trough — recover, don't push."},
+    {name:"Sprint 3 — CS build",   start:825, end:915,  type:"sprint",   tag:"goal 1",     note:"Implement what you studied this morning. Small, complete, working programs."},
+    {name:"Walk (outdoor)",        start:915, end:945,  type:"walk",     tag:"walk",       note:"30 min. Let Sprint 3 settle. Best thinking environment you have."},
+    {name:"Admin + comms",         start:945, end:1035, type:"admin",    tag:"admin",      note:"Email, scheduling, logistics. No hard creative work here."},
+    {name:"Leisure",               start:1035,end:1095, type:"leisure",  tag:"leisure",    note:"1 hour. Gaming, content, whatever restores you."},
+    {name:"Sprint 4 — Pressure",   start:1095,end:1155, type:"sprint",   tag:"goal 2",     note:"One-page brief: problem, solution, who pays, what breaks it."},
+    {name:"Dinner",                start:1155,end:1200, type:"fuel",     tag:"fuel",       note:"Eat. Don't work through this."},
+    {name:"Evening walk",          start:1200,end:1230, type:"walk",     tag:"walk",       note:"30 min. Improves sleep onset significantly."},
+    {name:"Wind-down + journal",   start:1230,end:1380, type:"routine",  tag:"wind-down",  note:"Back page: reflection, carry-forwards, tomorrow's priorities."},
+    {name:"Sleep — 7 hrs",         start:1380,end:1560, type:"sleep",    tag:"sleep",      note:"Hard anchor. Consistent timing is the most important variable."},
+  ],
+
+/ /Schedules 
+
+
+use chrono::NaiveTime
+
+fn convert_time(time: &str) -> Resultr<u64, String> {
+    let format = "%I:%M%P";
+
+    let time = NaiveTime::parse_from_str(input, format).map_err(|e| format!("Failed to Parse '{}': {}, input, e))?;
+
+    Ok(time.num_seconds_from_midnight())
+
+
+
+}
+Attributes: name, start, end, activity, tag, note 
+    -> ex. monday: [
+        {name: "Wake Up", start = convert_time("5:55am"), end = convert_time("6:30am"), activity = "Rise", tag = "Routine", note = "Water, Podcast, Coffee, Breakfast. What are todays goals?"}
+
+                                                                    }
+    ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
